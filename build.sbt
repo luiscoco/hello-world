@@ -32,9 +32,13 @@ libraryDependencies ++= Seq(
   "org.scalaxb" %% "scalaxb" % "1.11.1",
 
   "com.typesafe.akka" %% "akka-actor" % "2.6.14",
-  "com.typesafe.play" %% "play-json" % "2.9.2"
+  "com.typesafe.play" %% "play-json" % "2.9.2",
 
-
+  "com.github.scopt" %% "scopt" % "4.1.0"
 )
+
+dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.15.2"
+
+
 
 
