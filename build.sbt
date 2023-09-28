@@ -35,7 +35,13 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.9.2",
 
   "com.github.scopt" %% "scopt" % "4.1.0"
+
+
 )
+
+// https://mvnrepository.com/artifact/com.github.plokhotnyuk.jsoniter-scala/jsoniter-scala-core
+libraryDependencies += "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.23.5"
+libraryDependencies += "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.23.5"
 
 dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.15.2"
 

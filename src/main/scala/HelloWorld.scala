@@ -7,11 +7,18 @@ case class Config(
                    schema: String = "-1",
 )
 
-
+/**
+* 1) env: prod uat, dev
+ *
+ * 2)
+*
+* */
 
 
 object HelloWorld extends App {
 
+
+  Set(1,2,3).map(_ + 1)
 
   import scopt.OParser
   val builder = OParser.builder[Config]
