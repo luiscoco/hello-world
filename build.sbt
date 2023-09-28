@@ -23,6 +23,7 @@ version := "1.0"
 //libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.0"
 
 val sparkVersion = "3.5.0"
+val circeVersion = "0.14.1"
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1",
@@ -34,7 +35,10 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.6.14",
   "com.typesafe.play" %% "play-json" % "2.9.2",
 
-  "com.github.scopt" %% "scopt" % "4.1.0"
+  "com.github.scopt" %% "scopt" % "4.1.0",
+  "io.circe" %% "circe-core" % circeVersion,
+  "io.circe" %% "circe-generic" % circeVersion,
+  "io.circe" %% "circe-parser" % circeVersion
 
 
 )
