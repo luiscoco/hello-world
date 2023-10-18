@@ -17,6 +17,8 @@ name := "hello-world"
 organization := "ch.epfl.scala"
 version := "1.0"
 
+mainClass in Compile := Some("HelloWorld")
+
 
 //libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1"
 //libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
