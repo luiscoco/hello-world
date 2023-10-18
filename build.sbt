@@ -4,14 +4,14 @@ scalaVersion := "2.13.8"
 
 // ============================================================================
 
-name := "hello-world"
+name := "main"
 organization := "ch.epfl.scala"
 version := "1.0"
 
 lazy val root = (project in file("."))
   .settings(
     scalaVersion := "2.13.8",  // Consistent Scala version
-    mainClass := Some("HelloWorld"),
+    mainClass := Some("Main"),
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1",
       "org.postgresql" % "postgresql" % "42.6.0",
