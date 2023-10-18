@@ -3,7 +3,7 @@ name: Scala CI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -19,11 +19,10 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Build with sbt
-      run: sbt compile
+    - name: Set up sbt
+      run: |
+        sudo apt-get install sbt
+        sbt sbtVersion
 
-    - name: Run Tests
-      run: sbt test
-      
-    - name: Run Scala Application
-      run: scala HelloWorld.scala
+    - name: Build and Run
+      run: sbt run
