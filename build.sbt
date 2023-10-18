@@ -23,6 +23,7 @@ version := "1.0"
 //libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.0"
 
 val sparkVersion = "3.5.0"
+val circeVersion = "0.14.1"
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1",
@@ -32,9 +33,22 @@ libraryDependencies ++= Seq(
   "org.scalaxb" %% "scalaxb" % "1.11.1",
 
   "com.typesafe.akka" %% "akka-actor" % "2.6.14",
-  "com.typesafe.play" %% "play-json" % "2.9.2"
+  "com.typesafe.play" %% "play-json" % "2.9.2",
+
+  "com.github.scopt" %% "scopt" % "4.1.0",
+  "io.circe" %% "circe-core" % circeVersion,
+  "io.circe" %% "circe-generic" % circeVersion,
+  "io.circe" %% "circe-parser" % circeVersion
 
 
 )
+
+// https://mvnrepository.com/artifact/com.github.plokhotnyuk.jsoniter-scala/jsoniter-scala-core
+libraryDependencies += "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.23.5"
+libraryDependencies += "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.23.5"
+
+dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.15.2"
+
+
 
 
