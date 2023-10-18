@@ -17,7 +17,13 @@ name := "hello-world"
 organization := "ch.epfl.scala"
 version := "1.0"
 
-mainClass in Compile := Some("HelloWorld")
+lazy val root = (project in file("."))
+  .settings(
+    name := "hello-world",
+    version := "1.0",
+    scalaVersion := "2.13.5",
+    mainClass := Some("HelloWorld")
+  )
 
 
 //libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1"
