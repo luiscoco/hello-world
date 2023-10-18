@@ -24,3 +24,6 @@ jobs:
 
     - name: Run Tests
       run: sbt test
+      
+    - name: Run Scala Application
+      run: scala HelloWorld.scala
