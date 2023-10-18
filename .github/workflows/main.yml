@@ -26,3 +26,6 @@ jobs:
 
     - name: Build and Run
       run: /usr/local/sbt/bin/sbt run
+
+    - name: Build and Run
+      run: /usr/local/sbt/bin/sbt "runMain HelloWorld"
