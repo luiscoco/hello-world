@@ -19,10 +19,10 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Set up sbt
+    - name: Download and install sbt
       run: |
-        sudo apt-get install sbt
-        sbt sbtVersion
+        curl -L https://github.com/sbt/sbt/releases/download/v1.5.5/sbt-1.5.5.tgz | tar xz -C /tmp && \
+        sudo mv /tmp/sbt /usr/local
 
     - name: Build and Run
-      run: sbt run
+      run: /usr/local/sbt/bin/sbt run
