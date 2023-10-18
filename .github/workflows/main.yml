@@ -25,4 +25,4 @@ jobs:
         sudo mv /tmp/sbt /usr/local
 
     - name: Build and Run
-      run: /usr/local/sbt/bin/sbt "runMain HelloWorld"
+      run: /usr/local/sbt/bin/sbt "runMain Main"
